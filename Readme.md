@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Юля Касабуцкая](https://up.htmlacademy.ru/htmlcss/26/user/177342).
-* Наставник: [Алексей Беляев](https://htmlacademy.ru/profile/id691043).
+* Наставник: [Аслан Березгов](https://htmlacademy.ru/profile/id858779).
 
 ---
 
