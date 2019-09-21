@@ -1,0 +1,366 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cuprum', 'Arial', sans-serif;
+    font-weight: 400;
+    color: #000000;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+h2 {
+    text-transform: uppercase;
+}
+
+.main-header {
+    background-color: #f3f7f8;
+    font-size: 17px;
+    line-height: 18px;
+}
+
+.main-navigation a, .main-header .top-navigation {
+    color: #ffffff;
+}
+
+.header-top {
+    background-color: #293449;
+}
+
+.logo {
+    background-color: #ee3643;
+}
+
+.logo:hover, .button:hover {
+    background-color: #ca2c37;
+}
+
+.logo:active, .button:active {
+    background-color: #ba2732;
+}
+
+.search-form input {
+    background-color: inherit;
+    color: #ffffff;
+    border: none;
+}
+
+.search-form input::placeholder {
+    color: #ffffff;
+}
+
+.button {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: 'Cuprum', 'Arial', sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    background-color: #ee3643;
+    border: none;
+}
+
+.white, .user a {
+    color: #000000;
+    background-color: #ffffff;
+    font-family: 'Cuprum', 'Arial', sans-serif;
+    text-transform: none;
+    font-size: 21px;
+    line-height: 21px;
+}
+
+.white:hover, .user a:hover {
+    color: #ee3643;
+}
+
+.white:active, .user a:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.green {
+    background-color: #63a63e;
+    font-family: 'Cuprum', 'Arial', sans-serif;
+    text-transform: none;
+    font-size: 17px;
+    line-height: 18px;
+}
+
+.green:hover {
+    background-color: #5fbb2d;
+}
+
+.green:active {
+    background-color: #518534;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.description {
+    color: #ee3643;
+    font-style: italic;
+    font-size: 16px;
+    line-height: 23px;
+}
+
+.header-bottom .phone {
+    color: #ee3643;
+    font-size: 21px;
+    line-height: 21px;
+    border: 3px solid #ffffff;
+}
+
+.header-bottom .adress {
+    color: #32425c;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.main-navigation {
+    background-color: #32425c;
+}
+
+.contacts h2, .about h2 {
+    font-size: 30px;
+    line-height: 30px;
+}
+
+.contacts p, .about p {
+    font-family: 'PT Sans', 'Arial', sans-serif;
+    font-size: 13px;
+    line-height: 24px;
+}
+
+.about .cooperate {
+    font-family: 'Cuprum', 'Arial', sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.main-footer {
+    color: #ffffff;
+}
+
+.main-footer a {
+    color: #ffffff;
+}
+
+.footer-top {
+    background-color: #32425c;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.footer-bottom {
+    background-color: #293449;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.catalog-navigation a {
+    color: #ffd180;
+}
+
+.connection a {
+    color: #ffd180;
+}
+
+
+.user-links a {
+    color: #32425c;
+    font-size: 16px;
+    line-height: 18px;
+    text-decoration: underline;
+}
+
+.user-links a:hover {
+    color: #ee3643;
+}
+
+.user-links a:active {
+    color: rgba(50, 66, 92, 0.3);
+}
+
+.breadcrumbs li, .bread-crumbs a {
+    color: #000000;
+    font-family: 'PT Sans', 'Arial', sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+
+.page-title {
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #32425c;
+    background-color: #f2f6f8;
+}
+
+.button-buy, .button-save {
+    visibility: hidden;
+}
+
+.catalog {
+    font-family: 'PT Sans', 'Arial', sans-serif;
+}
+
+.catalog-item {
+    border: 1px solid #e5e5e5;
+    width: 220px;
+    height: 318px;
+}
+
+.catalog-item:hover {
+    box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
+}
+
+.catalog-item:hover img {
+    display: none;
+}
+
+.catalog-item:hover .button-buy {
+    visibility: visible;
+}
+
+.catalog-item:hover .button-save {
+    visibility: visible;
+}
+
+.catalog-item h3 {
+    font-family: 'PT Sans', 'Arial', sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.catalog-item del {
+    color: #999999;
+    font-size: 17px;
+    line-height: 18px;
+}
+
+.button-price {
+    font-family: 'PT Sans', 'Arial', sans-serif;
+    font-size: 17px;
+    line-height: 18px;
+    color: #ffffff;
+    background-color: #ee3643;
+}
+
+.button-buy {
+    font-family: 'Cuprum', 'Arial', sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    background-color: #63a63e;
+    box-shadow: 0 3px 0 #367315;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.button-buy:hover {
+    background-color: #5fbb2d;
+}
+
+.button-buy:active {
+    background-color: #518534;
+}
+
+.button-save {
+    font-family: 'Cuprum', 'Arial', sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    border: 3px solid #63a63e;
+    color: #32425c;
+    text-transform: uppercase;
+}
+
+.button-save:hover {
+    border: 3px solid #32425c;
+}
+
+.button-save:active {
+    border: 3px solid rgba(50, 66, 92, 0.3);
+}
+
+.about-product {
+    background-color: #f2f6f8;
+}
+
+.about-product h2 {
+    font-size: 30px;
+    line-height: 30px;
+}
+
+.about-product p {
+    font-family: 'PT Sans', 'Arial', sans-serif;
+    font-size: 13px;
+    line-height: 24px;
+}
+
+.pagination, .filter-button {
+    font-family: 'PT Sans', 'Arial', sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    border: 1px solid #e5e5e5;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.active {
+    background-color: #ee3643;
+    color: #ffffff;
+}
+
+.pagination:hover, .filter-button:hover {
+    border: 1px solid #bdc6ca;
+}
+
+.pagination:active, .filter-button:active {
+    border: 1px solid #ee3643;
+}
+
+/* .top-navigation:hover {
+    
+} */
+
+.top-navigation:active {
+    opacity: 0.6;
+}
+
+.filter-block {
+    font-family: 'PT Sans', 'Arial', sans-serif;
+    font-size: 15px;
+    line-height: 20px;
+    text-transform: uppercase;
+    border: none;
+}
+
+.filter-block legend {
+    font-size: 17px;
+    line-height: 30px;
+    font-weight: 700;
+}
+
+.main-navigation a:hover {
+    background-color: #293449;
+}
+
+.main-navigation a:active {
+    background-color: #1d2739;
+    color: rgba(255, 255, 255, 0.5);
+}
