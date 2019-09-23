@@ -14,10 +14,6 @@ body {
     color: #000000;
 }
 
-ul {
-    list-style: none;
-}
-
 img {
     max-width: 100%;
 }
@@ -77,36 +73,35 @@ h2 {
     border: none;
 }
 
-.white, .user a {
+.button-white, .user a {
     color: #000000;
     background-color: #ffffff;
     font-family: 'Cuprum', 'Arial', sans-serif;
-    text-transform: none;
     font-size: 21px;
     line-height: 21px;
 }
 
-.white:hover, .user a:hover {
+.button-white:hover, .user a:hover {
     color: #ee3643;
 }
 
-.white:active, .user a:active {
+.button-white:active, .user a:active {
     color: rgba(0, 0, 0, 0.3);
 }
 
-.green {
+.button-green {
+    color: #ffffff;
     background-color: #63a63e;
     font-family: 'Cuprum', 'Arial', sans-serif;
-    text-transform: none;
     font-size: 17px;
     line-height: 18px;
 }
 
-.green:hover {
+.button-green:hover {
     background-color: #5fbb2d;
 }
 
-.green:active {
+.button-green:active {
     background-color: #518534;
     color: rgba(255, 255, 255, 0.5);
 }
@@ -223,7 +218,7 @@ h2 {
 .catalog-item {
     border: 1px solid #e5e5e5;
     width: 220px;
-    height: 318px;
+    min-height: 318px;
 }
 
 .catalog-item:hover {
@@ -254,7 +249,7 @@ h2 {
     line-height: 18px;
 }
 
-.button-price {
+.price {
     font-family: 'PT Sans', 'Arial', sans-serif;
     font-size: 17px;
     line-height: 18px;
@@ -363,4 +358,12 @@ h2 {
 .main-navigation a:active {
     background-color: #1d2739;
     color: rgba(255, 255, 255, 0.5);
+}
+
+.new {
+    display: none;
+}
+
+.new-show {
+    display: block;
 }
