@@ -31,8 +31,8 @@
     <div class="header-bottom container">
       <div class="contact-info">
         <p class="description">Интернет-магазин<br>
-        строительных материалов<br>
-        и инструментов для ремонта
+          строительных материалов<br>
+          и инструментов для ремонта
         </p>
         <div class="header-contact">
           <a class="phone" href="tel:+7 (812) 555-05-55">+7 (812) 555-05-55</a>
@@ -262,31 +262,41 @@
     </div>
   </footer>
 
-  <form method="post" action="https://echo.htmlacademy.ru">
-    <h2 class="visually-hidden">Сообщение</h2>
-    <p>
-      <label for="user-name">Ваше имя:</label>
-      <input id="user-name" type="text" name="name" placeholder="Имя Фамилия">
-    </p>
-    <p>
-      <label for="user-email">Ваш e-mail:</label>
-      <input id="user-email" type="email" name="email" placeholder="email@example.com">
-    </p>
-    <p>
-      <label for="textarea">Текст письма:</label>
-      <textarea id="textarea" type="textarea" name="textarea" placeholder="В свободной форме"></textarea>
-    </p>
-    <button type="submit">Отправить</button>
-    <button type="button">Закрыть</button>
-  </form>
+  <section class="modal modal-mail">
+    <form method="post" action="https://echo.htmlacademy.ru">
+      <h2 class="visually-hidden">Сообщение</h2>
+      <div class="fieldset">
+        <p class="modal-name">
+          <label for="user-name">Ваше имя:</label>
+          <input id="user-name" type="text" name="name" placeholder="Имя Фамилия">
+        </p>
+        <p class="modal-email">
+          <label for="user-email">Ваш e-mail:</label>
+          <input id="user-email" type="email" name="email" placeholder="email@example.com">
+        </p>
+        <p class="message">
+          <label for="textarea">Текст письма:</label>
+          <textarea id="textarea" type="textarea" name="textarea" placeholder="В свободной форме"></textarea>
+        </p>
+      </div>
 
-  <section>
-    <h2>Мы на карте</h2>
-    <p>
-      <img src="img/mega_map.png" width="940" height="446"
-        alt="Мы находимся по адресу г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
-    </p>
-    <button type="button" aria-label="Закрыть">x</button>
+      <footer class="modal-footer">
+        <button class="button" type="submit">Отправить</button>
+        <button class="button-close" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+      </footer>
+
+    </form>
+  </section>
+
+  <section class="modal modal-map">
+    <h2 class="visually-hidden">Мы на карте</h2>
+    <img src="img/bigger-map.png" width="940" height="446"
+      alt="Мы находимся по адресу г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+    <button class="button-close" type="button">
+      <span class="visually-hidden">Закрыть</span>
+    </button>
   </section>
 
 </body>
