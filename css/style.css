@@ -85,13 +85,11 @@ header {
     background-color: #f3f7f8;
     font-size: 17px;
     line-height: 18px;
-    width: 100%;
     min-height: 320px;
 }
 
 .header-top {
     background-color: #293449;
-    width: 100%;
     height: 42px;
 }
 
@@ -245,8 +243,8 @@ header {
     line-height: 21px;
     border: 3px solid #ffffff;
     width: 270px;
-    height: 45px;
-    padding: 10px 47px 10px 70px;
+    min-height: 45px;
+    padding: 10px 20px 10px 70px;
 }
 
 .phone::before {
@@ -273,7 +271,7 @@ header {
     font-family: 'Cuprum', 'Arial', sans-serif;
     font-size: 21px;
     line-height: 21px;
-    height: 45px;
+    min-height: 45px;
     padding: 10px 25px;
 }
 
@@ -343,7 +341,6 @@ header {
     justify-content: space-between;
     margin-top: 70px;
     margin-bottom: 86px;
-    min-height: 380px;
 }
 
 .company-columns h2, .services h2 {
@@ -377,7 +374,6 @@ header {
     background-color: #ee3643;
     border: none;
     min-height: 38px;
-    margin: 10 auto;
     min-width: 220px;
     text-align: center;
 }
@@ -429,6 +425,15 @@ a.button {
     justify-content: space-between;
 }
 
+.footer-logo-group {
+    width: 380px;
+    padding-right: 20px;
+}
+
+.footer-navigation {
+    width: 560px;
+}
+
 .footer-top {
     background-color: #32425c;
     font-size: 18px;
@@ -472,7 +477,7 @@ a.button {
     flex-wrap: wrap;
 }
 
-.site-navigation li, .catalog-navigation li {
+.site-navigation li:not(:first-child), .catalog-navigation li:not(:first-child) {
     padding-left: 60px;
 }
 
@@ -697,6 +702,7 @@ a.button {
 
 .filters {
     width: 220px;
+    
 }
 
 .filters h2, .sorting h2 {
@@ -708,9 +714,8 @@ a.button {
     color: #000000;
     background-color: #f7f3ec;
     border-radius: 3px;
-    height: 38px;
+    padding: 10px 0;
     margin: 0;
-    margin-bottom: 20px;
     display: flex;
     align-content: center;
     align-items: center;
@@ -726,7 +731,6 @@ a.button {
     width: 700px;
     background-color: #f7f3ec;
     border-radius: 3px;
-    height: 38px;
     margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
@@ -899,11 +903,9 @@ a.button {
     font-size: 18px;
     line-height: 20px;
     text-align: center;
-    order: 2;
-    padding: 9px 25px 9px 25px;
-    padding-left: 30px;
+    order: 1;
+    padding: 9px 30px;
     margin: 0;
-    padding-right: 30px;
     min-height: 40px;
 }
 
@@ -912,7 +914,7 @@ a.button {
     font-size: 17px;
     line-height: 18px;
     font-weight: 700;
-    order: 3;
+    order: 2;
     text-align: center;
     min-height: 20px;
     margin-bottom: 9px;
@@ -924,7 +926,7 @@ a.button {
     line-height: 18px;
     color: #ffffff;
     background-color: #ee3643;
-    order: 4;
+    order: 3;
     border-radius: 3px;
     display: flex;
     justify-content: center;
@@ -1387,7 +1389,6 @@ a.button {
 
 .about-product {
     background-color: #f2f6f8;
-    width: 100%;
     padding: 30px 0 60px 0;
 }
 
@@ -1419,7 +1420,7 @@ a.button {
 .categories li, .features li {
     width: 300px;
     height: 123px;
-    padding: 25px;
+    padding: 25px 25px 20px 25px;
     position: relative;
 }
 
@@ -1598,11 +1599,9 @@ a.button {
 .heading {
     display: flex;
     justify-content: space-between;
-    align-content: center;
     align-items: center;
     background-color: #f9f5f0;
     height: 89px;
-    width: 100%;
     padding: 0 24px 0 28px;
     margin-bottom: 20px;
 }
@@ -1626,7 +1625,6 @@ a.button {
 .services {
     background-color: #f4f8fa;
     padding-top: 65px;
-    min-height: 522px;
 }
 
 .services h3 {
@@ -1664,7 +1662,7 @@ a.button {
 
 .services-description {
     width: 620px;
-    height: 285px;
+    min-height: 285px;
     background-image: url("../img/services-1.png");
     background-repeat: no-repeat;
     background-position: 150px 23px;
