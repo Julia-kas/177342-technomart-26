@@ -228,13 +228,14 @@
           <div class="services-description second-service">
             <h3>Гарантия</h3>
             <p>Если купленный у нас товар поломается или заискрит, <br>
-                а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. <br>
-                Дом уж восстановите как-нибудь сами.</p>
+              а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей
+              гарантии. Мы обменяем сгоревший товар на новый. <br>
+              Дом уж восстановите как-нибудь сами.</p>
           </div>
           <div class="services-description third-service">
             <h3>Кредит</h3>
             <p>Залезть в долговую яму стало проще! <br>
-                Кредитные консультанты придут вам на помощь.</p>
+              Кредитные консультанты придут вам на помощь.</p>
             <a class="button" href="#">Отправить заявку</a>
           </div>
         </div>
@@ -260,8 +261,8 @@
         <h2>Контакты</h2>
         <p>Вы можете забрать товар сами,<br>
           заехав в наш офис:</p>
-        <a href="#"><img src="img/map.png" alt="Наш офис" width="300" height="158"></a>
-        <button class="button">Заблудились? Напишите нам!</button>
+        <a class="map-show" href="#"><img src="img/map.png" alt="Наш офис" width="300" height="158"></a>
+        <button class="mail-show button">Заблудились? Напишите нам!</button>
       </section>
     </div>
   </main>
@@ -361,13 +362,90 @@
 
   <section class="modal modal-map">
     <h2 class="visually-hidden">Мы на карте</h2>
-    <img src="img/bigger-map.png" width="940" height="446"
-      alt="Мы находимся по адресу г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424177756!2d30.320889251895736!3d59.93879686895869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2s!4v1571265615099!5m2!1sru!2s"
+      width="940" height="446" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    <p>
+      <img src="img/bigger-map.png" width="940" height="446"
+        alt="Мы находимся по адресу г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+    </p>
     <button class="button-close" type="button">
       <span class="visually-hidden">Закрыть</span>
     </button>
   </section>
 
+
+  <script>
+
+    // Модалка карта
+    var map_btn = document.querySelector(".map-show");
+    var map_modal = document.querySelector(".modal-map");
+    var map_close = map_modal.querySelector(".button-close");
+
+    map_btn.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      map_modal.classList.add("modal-open");
+    })
+
+    map_close.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      map_modal.classList.remove("modal-open");
+    })
+
+    window.addEventListener("keydown", function (evt) {
+      if (evt.keyCode === 27) {
+        evt.preventDefault();
+        if (map_modal.classList.contains("modal-open")) {
+          map_modal.classList.remove("modal-open");
+        }
+      }
+    });
+
+    // Модалка Написать письмо
+
+    var mail_btn = document.querySelector(".mail-show");
+    var mail_modal = document.querySelector(".modal-mail");
+    var mail_close = mail_modal.querySelector(".button-close");
+
+    mail_btn.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      mail_modal.classList.add("modal-open");
+      mail_name.focus();
+    })
+
+    mail_close.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      mail_modal.classList.remove("modal-open");
+      mail_modal.classList.remove("modal-error");
+    })
+
+    window.addEventListener("keydown", function (evt) {
+      if (evt.keyCode === 27) {
+        evt.preventDefault();
+        if (mail_modal.classList.contains("modal-open")) {
+          mail_modal.classList.remove("modal-open");
+          mail_modal.classList.remove("modal-error");
+        }
+      }
+    });
+
+    // Проверка заполнения полей
+
+    var mail_form = mail_modal.querySelector("form");
+    var mail_name = mail_modal.querySelector("[name=name]");
+    var mail_email = mail_modal.querySelector("[name=email]");
+    var mail_textarea = mail_modal.querySelector("[name=textarea]");
+
+    mail_form.addEventListener("submit", function (evt) {
+      if (!mail_name.value || !mail_email.value || !mail_textarea.value) {
+        evt.preventDefault();
+        mail_modal.classList.remove("modal-error");
+        mail_modal.offsetWidth = mail_modal.offsetWidth;
+        mail_modal.classList.add("modal-error");
+      }
+    });
+
+  </script>
 </body>
 
 </html>
