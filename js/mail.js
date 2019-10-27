@@ -24,8 +24,6 @@ window.addEventListener("keydown", function (evt) {
   }
 });
 
-// Проверка заполнения полей
-
 var mail_form = mail_modal.querySelector("form");
 var mail_name = mail_modal.querySelector("[name=name]");
 var mail_email = mail_modal.querySelector("[name=email]");
