@@ -11,7 +11,7 @@ body {
     padding: 0;
     font-family: 'Cuprum', 'Arial', sans-serif;
     font-weight: 400;
-    color: #000000;
+    color: #000000;  
 }
 
 img {
@@ -23,10 +23,6 @@ a {
     text-decoration: none;
     display: inline-block;
     vertical-align: middle;
-}
-
-h2 {
-    text-transform: uppercase;
 }
 
 .top-navigation {
@@ -61,6 +57,7 @@ h2 {
     line-height: 23px;
     padding-left: 53px;
     padding-top: 3px;
+    padding-right: 30px;
     width: 300px;
 }
 
@@ -108,6 +105,7 @@ h2 {
     min-width: 220px;
     text-align: center;
     border-radius: 3px;
+    cursor: pointer;
 }
 
 a.button {
@@ -266,7 +264,7 @@ header {
 .contact-info {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 40px;
+    padding-bottom: 35px;
 }
 
 .phone {
@@ -382,6 +380,7 @@ header {
 }
 
 .company-columns h2, .services h2 {
+    text-transform: uppercase;
     font-size: 30px;
     line-height: 30px;
     margin-top: 0;
@@ -402,6 +401,16 @@ header {
 
 .contacts {
     width: 300px;
+}
+
+/* .map {
+    margin-top: 10px;
+} */
+
+.contacts p {
+    width: 200px;
+    margin: 0px;
+    margin-bottom: 28px;
 }
 
 .about .button {
@@ -473,6 +482,10 @@ header {
     margin-bottom: 33px;
 }
 
+.copyright {
+    width: 240px;
+}
+
 .site-navigation {
     margin-top: 35px;
 }
@@ -499,7 +512,7 @@ header {
 .social {
     display: flex;
     min-width: 160px;
-    padding-left: 53px;
+    padding-left: 35px;
 }
 
 .social a {
@@ -537,6 +550,10 @@ header {
     justify-content: space-between;
 }
 
+.connection p {
+    width: 140px;
+}
+
 .link:hover {
     text-decoration: underline;
 }
@@ -559,7 +576,8 @@ header {
 }
 
 .developed {
-    margin: 0 20px 0 50px;
+    margin-left: 20px;
+    padding-left: 25px;
 }
 
 .breadcrumbs {
@@ -634,11 +652,11 @@ header {
 
 .user-links {
     display: flex;
-    margin: 3px 18px;
+    margin: 7px 18px;
 }
 
 .user-links li {
-    margin-right: 30px;
+    margin-right: 32px;
     position: relative;
 }
 
@@ -649,7 +667,7 @@ header {
     height: 5px;
     border-radius: 50%;
     background-color: #32425c;
-    right: -17px;
+    right: -20px;
     top: 8px;
 }
 
@@ -755,7 +773,7 @@ header {
     padding-right: 17px;
 }
 
-.sorting-options a {
+.sort {
     font-family: 'PT Sans', 'Arial', sans-serif;
     font-size: 13px;
     line-height: 18px;
@@ -765,7 +783,21 @@ header {
     border-bottom: 1px dotted #ee3643;
 }
 
-.sorting-options .active {
+.sort:hover {
+    color: rgba(0, 0, 0);
+    border-bottom: 1px solid #ee3643;
+}
+
+.type{
+    margin-left: 25px;
+}
+
+.function{
+    margin-left: 20px;
+}
+
+
+.sort.active {
     color: #ee3643;
     border: none;
 }
@@ -776,8 +808,9 @@ header {
     justify-content: space-between;
 }
 
-.sorting-arrows .min-max {
-    background-image: url("../img/icon-up-dir.svg");
+.min-max {
+    background-image: url("../img/icon-up-dir-dark.svg");
+    opacity: 0.3;
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: 11px 10px;
@@ -786,14 +819,31 @@ header {
     border: none;
 }
 
-.sorting-arrows .max-min {
-    background-image: url("../img/icon-down-dir.svg");
+.min-max:hover {
+    background-image: url("../img/icon-up-dir-dark.svg");
+    opacity: 1;
+}
+
+
+.max-min {
+    background-image: url("../img/icon-down-dir-dark.svg");
+    opacity: 0.3;
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: 11px 10px;
     width: 11px;
     height: 10px;
     border: none;
+}
+
+.max-min:hover {
+    background-image: url("../img/icon-down-dir-dark.svg");
+    opacity: 1;
+}
+
+.sorting-arrows .active {
+    background-image: url("../img/icon-up-dir-red.svg");
+    opacity: 1;
 }
 
 .price-scale {
@@ -1026,7 +1076,7 @@ header {
     background-color: inherit;
     color: rgba(0, 0, 0, 0.3);
 }
-
+/* 
 .new {
     position: absolute;
     top: 0;
@@ -1037,6 +1087,23 @@ header {
 .new-show {
     display: block;
     z-index: 20;
+} */
+
+.new {
+    position: relative;
+}
+
+.new::after {
+    position: absolute;
+    content: "";
+    background-image: url("../img/new_flag.png");
+    background-size: 60px 60px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: 60px;
+    height: 60px;
+    top: 0;
+    right: 0;
 }
 
 .pagination {
@@ -1086,6 +1153,7 @@ header {
     width: 140px;
     min-height: 38px;
     margin-top: 34px;
+    cursor: pointer;
 }
 
 .pagination a:hover, .filter-button:hover {
@@ -1373,6 +1441,7 @@ header {
     font-weight: 400px;
     margin: 0;
     padding: 0 0 64px 175px;
+    text-transform: uppercase;
 }
 
 .modal-added h2::before {
@@ -1435,6 +1504,7 @@ header {
     font-size: 30px;
     line-height: 30px;
     font-weight: 500;
+    text-transform: uppercase;
 }
 
 .about-product p {
@@ -1661,6 +1731,10 @@ header {
     margin-bottom: 77px;
 }
 
+.column-description {
+    width: 400px;
+}
+
 .services h3 {
     color: #32425c;
     font-size: 36px;
@@ -1701,10 +1775,12 @@ header {
     background-repeat: no-repeat;
     background-position: 150px 23px;
     background-size: 468px 261px;
+    padding-right: 5px;
 }
 
 .services-description p {
     width: 380px;
+    margin: 0;
 }
 
 .first-service {
@@ -1763,3 +1839,12 @@ header {
 .services-options .active:hover {
     background-color: #ffffff;
 }
+/* 
+
+body {
+    background-image: url("../img/technomart-catalog.jpg");
+    background-repeat: no-repeat;
+    background-position: center 0;
+    filter: alpha(Opacity=50);
+    opacity: 0.50;
+} */
